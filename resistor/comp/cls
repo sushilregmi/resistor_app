@@ -1,0 +1,792 @@
+[1mdiff --git a/lib/main.dart b/lib/main.dart[m
+[1mindex 060a94f..07a593d 100644[m
+[1m--- a/lib/main.dart[m
+[1m+++ b/lib/main.dart[m
+[36m@@ -33,787 +33,3 @@[m [mclass MyApp extends StatelessWidget {[m
+     );[m
+   }[m
+ }[m
+[31m-[m
+[31m-class MyHomePage extends StatefulWidget {[m
+[31m-  @override[m
+[31m-  _MyHomePageState createState() => _MyHomePageState();[m
+[31m-}[m
+[31m-[m
+[31m-class _MyHomePageState extends State<MyHomePage> {[m
+[31m-  var color1 = Color(0xff000000);[m
+[31m-  var color2 = Color(0xffFF0000);[m
+[31m-  var color3 = Color(0xffC0C0C0);[m
+[31m-  var color4 = Color(0xff008000);[m
+[31m-  String a = ' 0';[m
+[31m-  String b = '0';[m
+[31m-  String c = '1';[m
+[31m-  String d = '±1%';[m
+[31m-  String e = 'Ω';[m
+[31m-[m
+[31m-  @override[m
+[31m-  Widget build(BuildContext context) {[m
+[31m-    return Scaffold([m
+[31m-      backgroundColor: Colors.white,[m
+[31m-      appBar: AppBar([m
+[31m-        title: Text('Resistor'),[m
+[31m-        backgroundColor: Colors.amberAccent,[m
+[31m-      ),[m
+[31m-      body: Column([m
+[31m-        mainAxisAlignment: MainAxisAlignment.start,[m
+[31m-        crossAxisAlignment: CrossAxisAlignment.start,[m
+[31m-        children: <Widget>[[m
+[31m-          Padding([m
+[31m-            padding: const EdgeInsets.fromLTRB(45, 0, 0, 0),[m
+[31m-            child: Row([m
+[31m-              mainAxisAlignment: MainAxisAlignment.start,[m
+[31m-              crossAxisAlignment: CrossAxisAlignment.start,[m
+[31m-              children: <Widget>[[m
+[31m-                Image.asset([m
+[31m-                  'assets/1st.png',[m
+[31m-                  height: 100,[m
+[31m-                ),[m
+[31m-                Column([m
+[31m-                  children: <Widget>[[m
+[31m-                    SizedBox([m
+[31m-                      height: 29,[m
+[31m-                    ),[m
+[31m-                    Container([m
+[31m-                      width: 15,[m
+[31m-                      height: 47,[m
+[31m-                      color: color1,[m
+[31m-                    ),[m
+[31m-                  ],[m
+[31m-                ),[m
+[31m-                Column([m
+[31m-                  children: <Widget>[[m
+[31m-                    SizedBox([m
+[31m-                      height: 29,[m
+[31m-                    ),[m
+[31m-                    Image.asset([m
+[31m-                      'assets/3rd.png',[m
+[31m-                      height: 47,[m
+[31m-                    )[m
+[31m-                  ],[m
+[31m-                ),[m
+[31m-                Column([m
+[31m-                  children: <Widget>[[m
+[31m-                    SizedBox([m
+[31m-                      height: 29,[m
+[31m-                    ),[m
+[31m-                    Container([m
+[31m-                      width: 15,[m
+[31m-                      height: 47,[m
+[31m-                      color: color2,[m
+[31m-                    ),[m
+[31m-                  ],[m
+[31m-                ),[m
+[31m-                Column([m
+[31m-                  children: <Widget>[[m
+[31m-                    SizedBox([m
+[31m-                      height: 29,[m
+[31m-                    ),[m
+[31m-                    Image.asset([m
+[31m-                      'assets/3rd.png',[m
+[31m-                      height: 47,[m
+[31m-                    )[m
+[31m-                  ],[m
+[31m-                ),[m
+[31m-                Column([m
+[31m-                  children: <Widget>[[m
+[31m-                    SizedBox([m
+[31m-                      height: 29,[m
+[31m-                    ),[m
+[31m-                    Container([m
+[31m-                      width: 15,[m
+[31m-                      height: 47,[m
+[31m-                      color: color3,[m
+[31m-                    ),[m
+[31m-                  ],[m
+[31m-                ),[m
+[31m-                Column([m
+[31m-                  children: <Widget>[[m
+[31m-                    SizedBox([m
+[31m-                      height: 29,[m
+[31m-                    ),[m
+[31m-                    Image.asset([m
+[31m-                      'assets/4th.png',[m
+[31m-                      height: 47,[m
+[31m-                    )[m
+[31m-                  ],[m
+[31m-                ),[m
+[31m-                Column([m
+[31m-                  children: <Widget>[[m
+[31m-                    SizedBox([m
+[31m-                      height: 29,[m
+[31m-                    ),[m
+[31m-                    Container([m
+[31m-                      width: 15,[m
+[31m-                      height: 47,[m
+[31m-                      color: color4,[m
+[31m-                    ),[m
+[31m-                  ],[m
+[31m-                ),[m
+[31m-                Column([m
+[31m-                  children: <Widget>[[m
+[31m-                    SizedBox([m
+[31m-                      height: 19,[m
+[31m-                    ),[m
+[31m-                    Image.asset([m
+[31m-                      'assets/8th.png',[m
+[31m-                      height: 65,[m
+[31m-                    )[m
+[31m-                  ],[m
+[31m-                ),[m
+[31m-              ],[m
+[31m-            ),[m
+[31m-          ),[m
+[31m-          Padding([m
+[31m-            padding: const EdgeInsets.fromLTRB(60, 0, 0, 20),[m
+[31m-            child: Row([m
+[31m-              children: <Widget>[[m
+[31m-                SizedBox([m
+[31m-                  width: 30,[m
+[31m-                ),[m
+[31m-                Text([m
+[31m-                  'Value:',[m
+[31m-                  style: TextStyle([m
+[31m-                      color: Colors.black87,[m
+[31m-                      fontSize: 20,[m
+[31m-                      fontWeight: FontWeight.bold),[m
+[31m-                ),[m
+[31m-                SizedBox([m
+[31m-                  width: 20,[m
+[31m-                ),[m
+[31m-                Text([m
+[31m-                  '$a$b x $c $e $d',[m
+[31m-                  style: TextStyle([m
+[31m-                    color: Colors.black87,[m
+[31m-                    fontSize: 20,[m
+[31m-                  ),[m
+[31m-                )[m
+[31m-              ],[m
+[31m-            ),[m
+[31m-          ),[m
+[31m-          Padding([m
+[31m-            padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),[m
+[31m-            child: Container([m
+[31m-              height: 455,[m
+[31m-              width: 400,[m
+[31m-              decoration: BoxDecoration([m
+[31m-                border: Border.all(color: Colors.black),[m
+[31m-                color: Colors.black12,[m
+[31m-              ),[m
+[31m-              child: Row([m
+[31m-                children: <Widget>[[m
+[31m-                  SizedBox([m
+[31m-                    width: 8,[m
+[31m-                  ),[m
+[31m-                  SingleChildScrollView([m
+[31m-                    child: Column([m
+[31m-                      children: <Widget>[[m
+[31m-                        Padding([m
+[31m-                          padding: const EdgeInsets.all(8.0),[m
+[31m-                          child: Text([m
+[31m-                            '1st Band',[m
+[31m-                            style: TextStyle(fontWeight: FontWeight.bold),[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Colors.black,[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '0';[m
+[31m-                                color1 = Color(0xff000000);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffA52A2A),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '1';[m
+[31m-                                color1 = Color(0xffA52A2A);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFF0000),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '2';[m
+[31m-                                color1 = Color(0xffFF0000);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFA500),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '3';[m
+[31m-                                color1 = Color(0xffFFA500);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFFF00),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '4';[m
+[31m-                                color1 = Color(0xffFFFF00);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff008000),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '5';[m
+[31m-                                color1 = Color(0xff008000);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff0000FF),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '6';[m
+[31m-                                color1 = Color(0xff0000FF);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                            minWidth: 50,[m
+[31m-                            height: 14,[m
+[31m-                            buttonColor: Color(0xff800080),[m
+[31m-                            child: RaisedButton([m
+[31m-                              autofocus: false,[m
+[31m-                              onPressed: () {[m
+[31m-                                setState(() {[m
+[31m-                                  a = '7';[m
+[31m-                                  color1 = Color(0xff800080);[m
+[31m-                                });[m
+[31m-                              },[m
+[31m-                            )),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff808080),[m
+[31m-                          child: RaisedButton([m
+[31m-                            autofocus: false,[m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '8';[m
+[31m-                                color1 = Color(0xff808080);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFFFFF),[m
+[31m-                          child: RaisedButton([m
+[31m-                            autofocus: false,[m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                a = '9';[m
+[31m-                                color1 = Color(0xffFFFFFF);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                      ],[m
+[31m-                    ),[m
+[31m-                  ),[m
+[31m-                  SizedBox([m
+[31m-                    width: 30,[m
+[31m-                  ),[m
+[31m-                  SingleChildScrollView([m
+[31m-                    child: Column([m
+[31m-                      children: <Widget>[[m
+[31m-                        Padding([m
+[31m-                          padding: const EdgeInsets.all(8.0),[m
+[31m-                          child: Text([m
+[31m-                            '2nd Band',[m
+[31m-                            style: TextStyle(fontWeight: FontWeight.bold),[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Colors.black,[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '0';[m
+[31m-                                color2 = Color(0xff000000);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffA52A2A),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '1';[m
+[31m-                                color2 = Color(0xffA52A2A);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFF0000),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '2';[m
+[31m-                                color2 = Color(0xffFF0000);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFA500),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '3';[m
+[31m-                                color2 = Color(0xffFFA500);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFFF00),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '4';[m
+[31m-                                color2 = Color(0xffFFFF00);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff008000),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '5';[m
+[31m-                                color2 = Color(0xff008000);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff0000FF),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '6';[m
+[31m-                                color2 = Color(0xff0000FF);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                            minWidth: 50,[m
+[31m-                            height: 14,[m
+[31m-                            buttonColor: Color(0xff800080),[m
+[31m-                            child: RaisedButton([m
+[31m-                              autofocus: false,[m
+[31m-                              onPressed: () {[m
+[31m-                                setState(() {[m
+[31m-                                  b = '7';[m
+[31m-                                  color2 = Color(0xff800080);[m
+[31m-                                });[m
+[31m-                              },[m
+[31m-                            )),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff808080),[m
+[31m-                          child: RaisedButton([m
+[31m-                            autofocus: false,[m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '8';[m
+[31m-                                color2 = Color(0xff808080);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFFFFF),[m
+[31m-                          child: RaisedButton([m
+[31m-                            autofocus: false,[m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                b = '9';[m
+[31m-                                color2 = Color(0xffFFFFFF);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                      ],[m
+[31m-                    ),[m
+[31m-                  ),[m
+[31m-                  SizedBox([m
+[31m-                    width: 30,[m
+[31m-                  ),[m
+[31m-                  SingleChildScrollView([m
+[31m-                    child: Column([m
+[31m-                      children: <Widget>[[m
+[31m-                        Padding([m
+[31m-                          padding: const EdgeInsets.all(8.0),[m
+[31m-                          child: Text([m
+[31m-                            '3rd Band',[m
+[31m-                            style: TextStyle(fontWeight: FontWeight.bold),[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Colors.black,[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                c = '0';[m
+[31m-                                color3 = Color(0xff000000);[m
+[31m-                                e = 'Ω';[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffA52A2A),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                c = '10';[m
+[31m-                                color3 = Color(0xffA52A2A);[m
+[31m-                                e = 'Ω';[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFF0000),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                c = '100';[m
+[31m-                                color3 = Color(0xffFF0000);[m
+[31m-                                e = 'Ω';[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFA500),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                e = 'kΩ';[m
+[31m-                                c = '1';[m
+[31m-                                color3 = Color(0xffFFA500);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFFF00),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                e = 'kΩ';[m
+[31m-                                c = '10';[m
+[31m-                                color3 = Color(0xffFFFF00);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff008000),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                e = 'kΩ';[m
+[31m-                                c = '100';[m
+[31m-                                color3 = Color(0xff008000);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff0000FF),[m
+[31m-                          child: RaisedButton([m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                c = '1';[m
+[31m-                                e = 'MΩ';[m
+[31m-                                color3 = Color(0xff0000FF);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                            minWidth: 50,[m
+[31m-                            height: 14,[m
+[31m-                            buttonColor: Color(0xff800080),[m
+[31m-                            child: RaisedButton([m
+[31m-                              autofocus: false,[m
+[31m-                              onPressed: () {[m
+[31m-                                setState(() {[m
+[31m-                                  e = 'MΩ';[m
+[31m-                                  c = '10';[m
+[31m-                                  color3 = Color(0xff800080);[m
+[31m-                                });[m
+[31m-                              },[m
+[31m-                            )),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xff808080),[m
+[31m-                          child: RaisedButton([m
+[31m-                            autofocus: false,[m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                e = 'MΩ';[m
+[31m-                                c = '100';[m
+[31m-                                color3 = Color(0xff808080);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFFFFF),[m
+[31m-                          child: RaisedButton([m
+[31m-                            autofocus: false,[m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                e = 'GΩ';[m
+[31m-                                c = '1';[m
+[31m-                                color3 = Color(0xffFFFFFF);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffFFD700),[m
+[31m-                          child: RaisedButton([m
+[31m-                            autofocus: false,[m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                e = 'GΩ';[m
+[31m-                                c = '0.1';[m
+[31m-                                color3 = Color(0xffFFD700);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                        ButtonTheme([m
+[31m-                          minWidth: 50,[m
+[31m-                          height: 14,[m
+[31m-                          buttonColor: Color(0xffC0C0C0),[m
+[31m-                          child: RaisedButton([m
+[31m-                            autofocus: false,[m
+[31m-                            onPressed: () {[m
+[31m-                              setState(() {[m
+[31m-                                e = 'GΩ';[m
+[31m-                                c = '0.01';[m
+[31m-                                color3 = Color(0xffC0C0C0);[m
+[31m-                              });[m
+[31m-                            },[m
+[31m-                          ),[m
+[31m-                        ),[m
+[31m-                      ],[m
+[31m-                    ),[m
+[31m-                  ),[m
+[31m-                  SizedBox([m
+[31m-                    width: 30,[m
+[31m-                  ),[m
+[31m-                  Column([m
+[31m-                    children: <Widget>[[m
+[31m-                      Padding([m
+[31m-                        padding: const EdgeInsets.all(8.0),[m
+[31m-                        child: Text([m
+[31m-                          '4th Band',[m
+[31m-                          style: TextStyle(fontWeight: FontWeight.bold),[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                      ButtonTheme([m
+[31m-                        minWidth: 50,[m
+[31m-                        height: 14,[m
+[31m-                        buttonColor: Color(0xffA52A2A),[m
+[31m-                        child: RaisedButton([m
+[31m-                          onPressed: () {[m
+[31m-                            setState(() {[m
+[31m-                              d = '±1%';[m
+[31m-                              color4 = Color(0xffA52A2A);[m
+[31m-                            });[m
+[31m-                          },[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                      ButtonTheme([m
+[31m-                        minWidth: 50,[m
+[31m-                        height: 14,[m
+[31m-                        buttonColor: Color(0xffFF0000),[m
+[31m-                        child: RaisedButton([m
+[31m-                          onPressed: () {[m
+[31m-                            setState(() {[m
+[31m-                              d = '±2%';[m
+[31m-                              color4 = Color(0xffFF0000);[m
+[31m-                            });[m
+[31m-                          },[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                      ButtonTheme([m
+[31m-                        minWidth: 50,[m
+[31m-                        height: 14,[m
+[31m-                        buttonColor: Color(0xff008000),[m
+[31m-                        child: RaisedButton([m
+[31m-                          onPressed: () {[m
+[31m-                            setState(() {[m
+[31m-                              d = '±0.5%';[m
+[31m-                              color4 = Color(0xff008000);[m
+[31m-                            });[m
+[31m-                          },[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                      ButtonTheme([m
+[31m-                        minWidth: 50,[m
+[31m-                        height: 14,[m
+[31m-                        buttonColor: Color(0xff0000FF),[m
+[31m-                        child: RaisedButton([m
+[31m-                          onPressed: () {[m
+[31m-                            setState(() {[m
+[31m-                              d = '±0.25%';[m
+[31m-                              color4 = Color(0xff0000FF);[m
+[31m-                            });[m
+[31m-                          },[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                      ButtonTheme([m
+[31m-                        minWidth: 50,[m
+[31m-                        height: 14,[m
+[31m-                        buttonColor: Color(0xff8000FF),[m
+[31m-                        child: RaisedButton([m
+[31m-                          onPressed: () {[m
+[31m-                            setState(() {[m
+[31m-                              d = '±0.1%';[m
+[31m-                              color4 = Color(0xff8000FF);[m
+[31m-                            });[m
+[31m-                          },[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                      ButtonTheme([m
+[31m-                        minWidth: 50,[m
+[31m-                        height: 14,[m
+[31m-                        buttonColor: Color(0xff808080),[m
+[31m-                        child: RaisedButton([m
+[31m-                          onPressed: () {[m
+[31m-                            setState(() {[m
+[31m-                              d = '±0..05%';[m
+[31m-                              color4 = Color(0xff808080);[m
+[31m-                            });[m
+[31m-                          },[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                      ButtonTheme([m
+[31m-                        minWidth: 50,[m
+[31m-                        height: 14,[m
+[31m-                        buttonColor: Color(0xffFFD700),[m
+[31m-                        child: RaisedButton([m
+[31m-                          onPressed: () {[m
+[31m-                            setState(() {[m
+[31m-                              d = '±5%';[m
+[31m-                              color4 = Color(0xffFFD700);[m
+[31m-                            });[m
+[31m-                          },[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                      ButtonTheme([m
+[31m-                        minWidth: 50,[m
+[31m-                        height: 14,[m
+[31m-                        buttonColor: Color(0xffC0C0C0),[m
+[31m-                        child: RaisedButton([m
+[31m-                          autofocus: false,[m
+[31m-                          onPressed: () {[m
+[31m-                            setState(() {[m
+[31m-                              d = '±10%';[m
+[31m-                              color4 = Color(0xffC0C0C0);[m
+[31m-                            });[m
+[31m-                          },[m
+[31m-                        ),[m
+[31m-                      ),[m
+[31m-                    ],[m
+[31m-                  )[m
+[31m-                ],[m
+[31m-              ),[m
+[31m-            ),[m
+[31m-          )[m
+[31m-        ],[m
+[31m-      ),[m
+[31m-    );[m
+[31m-  }[m
+[31m-}[m
